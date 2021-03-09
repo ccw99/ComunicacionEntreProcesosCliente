@@ -56,12 +56,58 @@ namespace Cliente
             // recibirMensaje("10.187.46.226");
 
             //json();
-            ConexionCliente cc = new ConexionCliente("10.187.46.226", 6400);
+            ConexionCliente cc = new ConexionCliente("10.187.249.56", 6400);
             cc.inicioSocket();
             cc.enviarMensaje(textBox1.Text);
+            string json = cc.recibirMensaje()+"}";
+            EstructuraDetalles.DetallesPC detalles = JsonConvert.DeserializeObject<EstructuraDetalles.DetallesPC>(json);
 
-            MessageBox.Show("hoal" + cc.recibirMensaje());
+             cargarDatos(detalles);
+
+            txtResultado.Text = json;
+            MessageBox.Show(json);
         }
+
+        public void cargarDatos(EstructuraDetalles.DetallesPC detalles) {
+            int cantidad = 0;
+            lblHora.Text = detalles.hora;
+            lblFecha.Text = detalles.fecha;
+
+            lblIdProducto.Text = detalles.tarjeM.deviceID;
+            lblConexionPrimaria.Text = detalles.tarjeM.primaryBus;
+            lblEstadoTrajeMadre.Text = detalles.tarjeM.status;
+
+            lblNombreProcesador.Text = detalles.process.name;
+            lblAnchoProcesador.Text = detalles.process.addressWidth;
+            lblVelocidadProcesador.Text = detalles.process.velocity;
+            lblEstadoProcesador.Text = detalles.process.status;
+
+            lblNombreBios.Text = detalles.bi.name;
+            lblVersion.Text = detalles.bi.version;
+
+            lblSistemaOperativo.Text = detalles.so.name;
+            lblOrganizacion.Text = detalles.so.organization;
+            lblPrimariaSO.Text = detalles.so.primary;
+
+            lblEstadoTemp.Text = detalles.temp.status;
+            lblTemperaturaActual.Text = detalles.temp.temperature;
+
+            foreach  (EstructuraDetalles.DiscoDuro item in detalles.discoD)
+            {
+                cantidad++;
+                lbxDiscoDuro.Items.Add("Disco duro: " + cantidad);
+                lbxDiscoDuro.Items.Add("Nombre : " + item.name);
+                lbxDiscoDuro.Items.Add("Modelo : " + item.model);
+                lbxDiscoDuro.Items.Add("Nº Particiones : " + item.partitions);
+                lbxDiscoDuro.Items.Add("Estado : " + item.status);
+            }
+
+        
+        }
+
+
+
+
         public void json() {
             string jsons = @"{
                    'x': 'Intel',
