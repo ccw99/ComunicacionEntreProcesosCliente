@@ -56,16 +56,18 @@ namespace Cliente
             // recibirMensaje("10.187.46.226");
 
             //json();
+            //Esta ip hay q cambiar a la ip a la cual se conecta osea el servudir su ip
+
             ConexionCliente cc = new ConexionCliente("10.187.249.56", 6400);
             cc.inicioSocket();
-            cc.enviarMensaje(textBox1.Text);
+            cc.enviarMensaje("true");
             string json = cc.recibirMensaje()+"}";
             EstructuraDetalles.DetallesPC detalles = JsonConvert.DeserializeObject<EstructuraDetalles.DetallesPC>(json);
 
              cargarDatos(detalles);
 
             txtResultado.Text = json;
-            MessageBox.Show(json);
+           // MessageBox.Show(json);
         }
 
         public void cargarDatos(EstructuraDetalles.DetallesPC detalles) {
@@ -127,6 +129,21 @@ namespace Cliente
                 this.x = x;
                 this.y = y;
             }
+        }
+
+        private void btnServidor2_Click(object sender, EventArgs e)
+        {
+            //cambiar la i del servidor virtual
+            ConexionCliente cc = new ConexionCliente("10.187.249.56", 6400);
+            cc.inicioSocket();
+            cc.enviarMensaje("true");
+            string json = cc.recibirMensaje() + "}";
+            EstructuraDetalles.DetallesPC detalles = JsonConvert.DeserializeObject<EstructuraDetalles.DetallesPC>(json);
+
+            cargarDatos(detalles);
+
+            txtResultado.Text = json;
+           // MessageBox.Show(json);
         }
     }
 }

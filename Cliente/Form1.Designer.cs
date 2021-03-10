@@ -28,30 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnEnviarMensaje = new System.Windows.Forms.Button();
             this.txtResultado = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblIdProducto = new System.Windows.Forms.Label();
-            this.lblConexionPrimaria = new System.Windows.Forms.Label();
             this.lblEstadoTrajeMadre = new System.Windows.Forms.Label();
+            this.lblConexionPrimaria = new System.Windows.Forms.Label();
+            this.lblIdProducto = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblEstadoProcesador = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.lblVelocidadProcesador = new System.Windows.Forms.Label();
             this.lblAnchoProcesador = new System.Windows.Forms.Label();
             this.lblNombreProcesador = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.lblEstadoProcesador = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lblVersion = new System.Windows.Forms.Label();
             this.lblNombreBios = new System.Windows.Forms.Label();
@@ -71,6 +70,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.lbxDiscoDuro = new System.Windows.Forms.ListBox();
+            this.btnServidor2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -80,20 +80,13 @@
             this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(691, 95);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
-            // 
             // btnEnviarMensaje
             // 
-            this.btnEnviarMensaje.Location = new System.Drawing.Point(705, 57);
+            this.btnEnviarMensaje.Location = new System.Drawing.Point(716, 27);
             this.btnEnviarMensaje.Name = "btnEnviarMensaje";
             this.btnEnviarMensaje.Size = new System.Drawing.Size(75, 23);
             this.btnEnviarMensaje.TabIndex = 1;
-            this.btnEnviarMensaje.Text = "Enviar";
+            this.btnEnviarMensaje.Text = "Servidor 1";
             this.btnEnviarMensaje.UseVisualStyleBackColor = true;
             this.btnEnviarMensaje.Click += new System.EventHandler(this.btnEnviarMensaje_Click);
             // 
@@ -118,23 +111,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Fecha y Hora";
             // 
-            // label1
+            // lblFecha
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Hora";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 45);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Fecha";
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Location = new System.Drawing.Point(85, 45);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(13, 13);
+            this.lblFecha.TabIndex = 5;
+            this.lblFecha.Text = "..";
             // 
             // lblHora
             // 
@@ -145,14 +129,23 @@
             this.lblHora.TabIndex = 4;
             this.lblHora.Text = "..";
             // 
-            // lblFecha
+            // label2
             // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(85, 45);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(13, 13);
-            this.lblFecha.TabIndex = 5;
-            this.lblFecha.Text = "..";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(20, 45);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Fecha";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(20, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(30, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Hora";
             // 
             // groupBox2
             // 
@@ -169,41 +162,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tarjeta Madre";
             // 
-            // label3
+            // lblEstadoTrajeMadre
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 32);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "ID del Producto";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 61);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Conexion Primaria";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(20, 88);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 13);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Estado";
-            // 
-            // lblIdProducto
-            // 
-            this.lblIdProducto.AutoSize = true;
-            this.lblIdProducto.Location = new System.Drawing.Point(147, 32);
-            this.lblIdProducto.Name = "lblIdProducto";
-            this.lblIdProducto.Size = new System.Drawing.Size(13, 13);
-            this.lblIdProducto.TabIndex = 5;
-            this.lblIdProducto.Text = "..";
+            this.lblEstadoTrajeMadre.AutoSize = true;
+            this.lblEstadoTrajeMadre.Location = new System.Drawing.Point(147, 88);
+            this.lblEstadoTrajeMadre.Name = "lblEstadoTrajeMadre";
+            this.lblEstadoTrajeMadre.Size = new System.Drawing.Size(13, 13);
+            this.lblEstadoTrajeMadre.TabIndex = 7;
+            this.lblEstadoTrajeMadre.Text = "..";
             // 
             // lblConexionPrimaria
             // 
@@ -214,14 +180,41 @@
             this.lblConexionPrimaria.TabIndex = 6;
             this.lblConexionPrimaria.Text = "..";
             // 
-            // lblEstadoTrajeMadre
+            // lblIdProducto
             // 
-            this.lblEstadoTrajeMadre.AutoSize = true;
-            this.lblEstadoTrajeMadre.Location = new System.Drawing.Point(147, 88);
-            this.lblEstadoTrajeMadre.Name = "lblEstadoTrajeMadre";
-            this.lblEstadoTrajeMadre.Size = new System.Drawing.Size(13, 13);
-            this.lblEstadoTrajeMadre.TabIndex = 7;
-            this.lblEstadoTrajeMadre.Text = "..";
+            this.lblIdProducto.AutoSize = true;
+            this.lblIdProducto.Location = new System.Drawing.Point(147, 32);
+            this.lblIdProducto.Name = "lblIdProducto";
+            this.lblIdProducto.Size = new System.Drawing.Size(13, 13);
+            this.lblIdProducto.TabIndex = 5;
+            this.lblIdProducto.Text = "..";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(20, 88);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 13);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Estado";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(20, 61);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(91, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Conexion Primaria";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(20, 32);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "ID del Producto";
             // 
             // groupBox3
             // 
@@ -239,6 +232,24 @@
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Procesador";
+            // 
+            // lblEstadoProcesador
+            // 
+            this.lblEstadoProcesador.AutoSize = true;
+            this.lblEstadoProcesador.Location = new System.Drawing.Point(133, 108);
+            this.lblEstadoProcesador.Name = "lblEstadoProcesador";
+            this.lblEstadoProcesador.Size = new System.Drawing.Size(13, 13);
+            this.lblEstadoProcesador.TabIndex = 15;
+            this.lblEstadoProcesador.Text = "..";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 108);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(40, 13);
+            this.label13.TabIndex = 14;
+            this.label13.Text = "Estado";
             // 
             // lblVelocidadProcesador
             // 
@@ -293,24 +304,6 @@
             this.label11.Size = new System.Drawing.Size(106, 13);
             this.label11.TabIndex = 8;
             this.label11.Text = "Nombre del producto";
-            // 
-            // lblEstadoProcesador
-            // 
-            this.lblEstadoProcesador.AutoSize = true;
-            this.lblEstadoProcesador.Location = new System.Drawing.Point(133, 108);
-            this.lblEstadoProcesador.Name = "lblEstadoProcesador";
-            this.lblEstadoProcesador.Size = new System.Drawing.Size(13, 13);
-            this.lblEstadoProcesador.TabIndex = 15;
-            this.lblEstadoProcesador.Text = "..";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 108);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(40, 13);
-            this.label13.TabIndex = 14;
-            this.label13.Text = "Estado";
             // 
             // groupBox4
             // 
@@ -497,11 +490,22 @@
             this.lbxDiscoDuro.Size = new System.Drawing.Size(287, 290);
             this.lbxDiscoDuro.TabIndex = 0;
             // 
+            // btnServidor2
+            // 
+            this.btnServidor2.Location = new System.Drawing.Point(716, 57);
+            this.btnServidor2.Name = "btnServidor2";
+            this.btnServidor2.Size = new System.Drawing.Size(75, 23);
+            this.btnServidor2.TabIndex = 10;
+            this.btnServidor2.Text = "Servidor 2";
+            this.btnServidor2.UseVisualStyleBackColor = true;
+            this.btnServidor2.Click += new System.EventHandler(this.btnServidor2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1329, 732);
+            this.Controls.Add(this.btnServidor2);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
@@ -511,7 +515,6 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtResultado);
             this.Controls.Add(this.btnEnviarMensaje);
-            this.Controls.Add(this.textBox1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
@@ -533,8 +536,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnEnviarMensaje;
         private System.Windows.Forms.TextBox txtResultado;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -577,6 +578,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.ListBox lbxDiscoDuro;
+        private System.Windows.Forms.Button btnServidor2;
     }
 }
 
